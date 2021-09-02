@@ -47,3 +47,58 @@ let nameToMatch2 = /gary/gi
 let result5 = sentenceWNames.match(nameToMatch2)
 console.log(result5)
     //will return array of strings of the name gary in given casing
+
+
+//wildcard period - dot: /./
+//searches for string that includes given characaters. dot will be placeholder 
+let names2 = 'Tom and tim'
+let namesToMatch = /T.m/gi
+let result6 = namesToMatch.test(names2)
+let result7 = names2.match(namesToMatch);
+console.log(result6, result7)
+    //will return ['Tom', 'tim]
+
+//character class: [aieou]
+// find strings with specfic characters
+let giantPhrase = 'Fii fie foe fol ful'
+let phraseMatch = /f[io]./gi
+let phraseResult = giantPhrase.match(phraseMatch)
+console.log(phraseResult)
+
+//hyphen character [a-z]
+//find strings in range of defined alphabet characters
+let namesList = 'fill till drill gill mill bill will gile mile'
+let phraseToMatch = /[a-g]il[le]/gi
+let phraseToMatchResult = namesList.match(phraseToMatch)
+console.log(phraseToMatchResult)
+
+//hyphen can also be used to range of numbers
+let nameNumCombo = 'Fart1 FaRt2 carE4 Dare6'
+let nameNumMatch = /[c-f]ar.[0-9]/gi
+let nameNumMatch2 = /[a-z1-9]/gi;
+let nameNumResult = nameNumCombo.match(nameNumMatch)
+let nameNumResult2 = nameNumCombo.match(nameNumMatch2);
+console.log(nameNumResult)
+console.log(nameNumResult2)
+    //when nums only works to 9, 10 is just 1 then 0
+
+
+//negative character sets: [^char]
+//characters that you dont want to include
+let quote = 'Tom tim T0n ton tol'
+let quoteMatch = /t[^i0]./gi
+let quoteResult = quote.match(quoteMatch)
+console.log(quoteResult)
+
+
+//finding repeating characters /+char/
+//will return string with all repeated defined character
+let repeatStr = 'li1 MiIii4 nIi2 oIiI3'
+let repeatMatch = /[l-o]i+[0-9]/gi
+let repeatResult = repeatStr.match(repeatMatch)
+console.log(repeatResult)
+
+let repeatStr2 = "Mississippi";
+let repeatMatch2 = /[s+][s+]/gi;
+let repeatResult2 = repeatStr2.match(repeatMatch2);
+console.log(repeatResult2);
