@@ -92,7 +92,7 @@ console.log(quoteResult)
 
 
 //finding repeating characters /+char/
-//will return string with all repeated defined character
+//will return string with all repeated defined character, finds 1+ character
 let repeatStr = 'li1 MiIii4 nIi2 oIiI3'
 let repeatMatch = /[l-o]i+[0-9]/gi
 let repeatResult = repeatStr.match(repeatMatch)
@@ -102,3 +102,14 @@ let repeatStr2 = "Mississippi";
 let repeatMatch2 = /[s+][s+]/gi;
 let repeatResult2 = repeatStr2.match(repeatMatch2);
 console.log(repeatResult2);
+
+//finding none or repeating values: *
+let noneStr = 'f fa faa ga gaa T taa'
+let noneMatch = /.a*/gi
+let noneRes = noneStr.match(noneMatch)
+console.log(noneRes)
+    //includes spaces??
+
+
+
+
