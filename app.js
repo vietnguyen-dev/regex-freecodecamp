@@ -110,6 +110,11 @@ let noneRes = noneStr.match(noneMatch)
 console.log(noneRes)
     //includes spaces??
 
+let lazy = 'titties titles tickets hickies bitches hitches'
+let lazyMatch = /.i[a-z]*?s/gi
+let lazyRes = lazy.match(lazyMatch)
+console.log(lazyRes)
 
-
-
+let criminals = 'CCCsdfasCdfCCccc'
+let criminalMatch = /C+/gi
+console.log(criminals.match(criminalMatch))
